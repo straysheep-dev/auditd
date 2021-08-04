@@ -81,8 +81,8 @@
 #-a never,exit -F arch=b64 -S clock_adjtime -F exe=/usr/sbin/VBoxService -F a2=0 -F exit=5
 
 ## VirtualBox Guest Additions (Ubuntu), timesync will overwhelm logs
-#-a never,exit -F arch=b32 -S clock_adjtime -F exe=/opt/VBoxGuestAdditions-6.1.22/sbin/VBoxService -F a2=0 -F exit=5
-#-a never,exit -F arch=b64 -S clock_adjtime -F exe=/opt/VBoxGuestAdditions-6.1.22/sbin/VBoxService -F a2=0 -F exit=5
+#-a never,exit -F arch=b32 -S clock_adjtime -F exe=/opt/VBoxGuestAdditions-6.1.26/sbin/VBoxService -F a2=0 -F exit=5
+#-a never,exit -F arch=b64 -S clock_adjtime -F exe=/opt/VBoxGuestAdditions-6.1.26/sbin/VBoxService -F a2=0 -F exit=5
 
 ### High Volume Event Filter (especially on Linux Workstations)
 -a never,exit -F arch=b32 -F dir=/dev/shm -k sharedmemaccess
