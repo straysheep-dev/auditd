@@ -490,6 +490,10 @@
 ### may indicate privilege escalation CVE-2021-3560
 -w /usr/bin/dbus-send -p x -k dbus_send
 
+## pkexec invocation
+### may indicate privilege escalation CVE-2021-4034
+-w /usr/bin/pkexec -p x -k pkexec
+
 ## Injection
 ### These rules watch for code injection by the ptrace facility.
 ### This could indicate someone trying to do something bad or just debugging
