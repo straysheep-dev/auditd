@@ -1,3 +1,5 @@
+[![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
+
         ___             ___ __      __
        /   | __  ______/ (_) /_____/ /
       / /| |/ / / / __  / / __/ __  / 
@@ -93,7 +95,7 @@ https://github.com/linux-audit/audit-userspace/blob/master/rules/30-nispom.rules
 
 ## Video Explanations by IppSec
 
-IppSec captured a video that explains how to detect the exploitation of the OMIGOD vulnerability using auditd. In that video, he walks you through the audit configuration maintained in this repo and exlains how to use it. I highly recommend this video to get a better understanding of what is happening in the config. 
+IppSec captured a video that explains how to detect the exploitation of the OMIGOD vulnerability using auditd. In that video, he walks you through the audit configuration maintained in this repo and explains how to use it. I highly recommend this video to get a better understanding of what is happening in the config.
 
 https://www.youtube.com/watch?v=lc1i9h1GyMA
 
