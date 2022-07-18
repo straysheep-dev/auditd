@@ -67,6 +67,10 @@ This is a **work in progress**
 
 Rule mappings will likely need revised, and errors / incompatibilities / unnecessary rules removed.
 
+### Additional License Information
+
+[bfuzzy1's auditd-attack](https://github.com/bfuzzy1/auditd-attack) is released under the [MIT license](https://github.com/bfuzzy1/auditd-attack/blob/master/auditd-attack/LICENSE).
+
 ## Sources
 
 The configuration is based on the following sources
