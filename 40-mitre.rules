@@ -39,7 +39,7 @@
 
 ## Audit the audit logs
 ### Successful and unsuccessful attempts to read information from the audit records
--w /var/log/audit/ -k T1070.002_Clear_Linux_Mac_System_Logs
+-w /var/log/audit/ -p r -k T1070.002_Clear_Linux_Mac_System_Logs
 
 ## Auditd configuration
 ### Modifications to audit configuration that occur while the audit collection functions are operating
