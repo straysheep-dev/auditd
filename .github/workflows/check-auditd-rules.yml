@@ -1,0 +1,29 @@
+name: check-auditd-rules
+
+# Tests the latest auditd rules file for errors.
+# Need to try using docker on runner to test fedora, debian, etc
+
+on:
+  push:
+    branches:
+      - testing
+defaults:
+  run:
+    shell: bash
+    working-directory: ~/
+jobs:
+  check-auditd-rules:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: testing
+      - name: Install auditd-latest
+        run: sudo apt update
+        run: sudo apt install -y auditd
+        run: if ! (systemctl is-active auditd); then sudo systemctl start auditd; fi
+      - name: Check rules
+        run: sudo cp auditd/40-mitre.rules /etc/audit/rules.d/
+        run: if sudo [ -e /etc/audit/rules.d/audit.rules ]; then sudo rm /etc/audit/rules.d/audit.rules
+        run: sudo augenrules --check 2>&1
+        run: sudo augenrules --load 2>&1
