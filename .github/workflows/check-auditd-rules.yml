@@ -26,7 +26,8 @@ jobs:
       - name: Remove default rules
         run: |
           sudo ls -l /etc/audit/rules.d/
-          sudo rm /etc/audit/rules.d/*
+          sudo rm -rf /etc/audit/rules.d
+          sudo mkdir /etc/audit/rules.d
       - name: Copy rules file to rules directory
         run: sudo cp $GITHUB_WORKSPACE/40-mitre.rules /etc/audit/rules.d/
       - name: Check rules
