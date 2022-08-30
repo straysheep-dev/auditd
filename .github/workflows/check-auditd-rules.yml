@@ -18,12 +18,17 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: testing
-      - name: Install auditd-latest
+      - name: Update package information
         run: sudo apt update
+      - name: Install auditd
         run: sudo apt install -y auditd
+      - name: Start auditd
         run: if ! (systemctl is-active auditd); then sudo systemctl start auditd; fi
-      - name: Check rules
+      - name: Copy rules file to rules directory
         run: sudo cp auditd/40-mitre.rules /etc/audit/rules.d/
+      - name: Remove default rules
         run: if sudo [ -e /etc/audit/rules.d/audit.rules ]; then sudo rm /etc/audit/rules.d/audit.rules
+      - name: Check rules
         run: sudo augenrules --check 2>&1
+      - name: Load rules
         run: sudo augenrules --load 2>&1
