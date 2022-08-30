@@ -6,7 +6,7 @@ name: check-auditd-rules-ubuntu-20.04
 on:
   push:
     branches:
-      - testing
+      - master
 defaults:
   run:
     shell: bash
