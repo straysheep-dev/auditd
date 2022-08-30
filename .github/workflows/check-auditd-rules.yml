@@ -26,7 +26,7 @@ jobs:
       - name: Copy rules file to rules directory
         run: sudo cp $GITHUB_WORKSPACE/40-mitre.rules /etc/audit/rules.d/
       - name: Remove default rules
-        run: if sudo [ -e /etc/audit/rules.d/audit.rules ]; then sudo rm /etc/audit/rules.d/audit.rules fi
+        run: if sudo [ -e /etc/audit/rules.d/audit.rules ]; then sudo rm /etc/audit/rules.d/audit.rules; fi
       - name: Check rules
         run: sudo augenrules --check 2>&1
       - name: Load rules
