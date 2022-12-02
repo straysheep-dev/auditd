@@ -783,12 +783,12 @@
 -w /usr/local/bin/VBoxAutostart -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
 -w /usr/local/bin/VBoxDTrace -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
 -w /usr/local/bin/vbox-img -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
--w /Library/LaunchDaemons/org.virtualbox.startup.plist -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
--w /Library/Application Support/VirtualBox/LaunchDaemons/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
--w /Library/Application Support/VirtualBox/VBoxDrv.kext/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
--w /Library/Application Support/VirtualBox/VBoxUSB.kext/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
--w /Library/Application Support/VirtualBox/VBoxNetFlt.kext/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
--w /Library/Application Support/VirtualBox/VBoxNetAdp.kext/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
+#-w /Library/LaunchDaemons/org.virtualbox.startup.plist -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
+#-w /Library/Application Support/VirtualBox/LaunchDaemons/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
+#-w /Library/Application Support/VirtualBox/VBoxDrv.kext/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
+#-w /Library/Application Support/VirtualBox/VBoxUSB.kext/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
+#-w /Library/Application Support/VirtualBox/VBoxNetFlt.kext/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
+#-w /Library/Application Support/VirtualBox/VBoxNetAdp.kext/ -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
 
 ### Parallels Desktop on macOS
 -w /usr/local/bin/prl_convert -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
@@ -798,7 +798,7 @@
 -w /usr/local/bin/prlctl -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
 -w /usr/local/bin/prlexec -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
 -w /usr/local/bin/prlsrvctl -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
--w /Library/Preferences/Parallels -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
+#-w /Library/Preferences/Parallels -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
 
 ### qemu on macOS
 -w /usr/local/bin/qemu-edid -p x -k T1497_Virtualization_Sandbox_Evasion_System_Checks
